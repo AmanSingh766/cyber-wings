@@ -88,90 +88,171 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# modules = [
+#     {
+#         "icon": "🔒",
+#         "title": "SSL Certificate Analyzer",
+#         "desc": "Deep inspection of SSL/TLS certificates — expiry, cipher strength, TLS version, SANs, and grading.",
+#         "badge": "FOUNDATIONAL",
+#         "color": "#00d4ff",
+#         "page": "🔒_SSL_Certificate"
+#     },
+#     {
+#         "icon": "💉",
+#         "title": "SQL Injection Scanner",
+#         "desc": "Error-based and time-based blind SQLi detection across URL parameters using curated payloads.",
+#         "badge": "CRITICAL",
+#         "color": "#ff4444",
+#         "page": "💉_SQL_Injection"
+#     },
+#     {
+#         "icon": "⚡",
+#         "title": "XSS Scanner",
+#         "desc": "Reflected Cross-Site Scripting detection with CSP header analysis and 14+ injection vectors.",
+#         "badge": "HIGH RISK",
+#         "color": "#ffcc00",
+#         "page": "⚡_XSS_Scanner"
+#     },
+#     {
+#         "icon": "🛡️",
+#         "title": "CSRF Scanner",
+#         "desc": "Form token analysis, SameSite cookie auditing, and CORS misconfiguration detection.",
+#         "badge": "MEDIUM",
+#         "color": "#ff8800",
+#         "page": "🛡️_CSRF_Scanner"
+#     },
+#     {
+#         "icon": "🔍",
+#         "title": "Advanced Scanner",
+#         "desc": "Security headers audit, sensitive file exposure, open redirect testing, and port scanning.",
+#         "badge": "ADVANCED",
+#         "color": "#aa44ff",
+#         "page": "🔍_Advanced_Scanner"
+#     },
+#     {
+#         "icon": "👥",
+#         "title": "About Cyber Wings",
+#         "desc": "Meet the team behind this project — our mission, roles, and location in Vadodara, Gujarat.",
+#         "badge": "TEAM",
+#         "color": "#00ff88",
+#         "page": "👥_About_Us"
+#     },
+# ]
 modules = [
     {
         "icon": "🔒",
         "title": "SSL Certificate Analyzer",
-        "desc": "Deep inspection of SSL/TLS certificates — expiry, cipher strength, TLS version, SANs, and grading.",
+        "desc": "...",
         "badge": "FOUNDATIONAL",
         "color": "#00d4ff",
-        "page": "🔒_SSL_Certificate"
+        "page": "1_SSL_Certificate"
     },
     {
         "icon": "💉",
         "title": "SQL Injection Scanner",
-        "desc": "Error-based and time-based blind SQLi detection across URL parameters using curated payloads.",
+        "desc": "...",
         "badge": "CRITICAL",
         "color": "#ff4444",
-        "page": "💉_SQL_Injection"
+        "page": "2_SQL_Injection"
     },
     {
         "icon": "⚡",
         "title": "XSS Scanner",
-        "desc": "Reflected Cross-Site Scripting detection with CSP header analysis and 14+ injection vectors.",
+        "desc": "...",
         "badge": "HIGH RISK",
         "color": "#ffcc00",
-        "page": "⚡_XSS_Scanner"
+        "page": "3_XSS_Scanner"
     },
     {
         "icon": "🛡️",
         "title": "CSRF Scanner",
-        "desc": "Form token analysis, SameSite cookie auditing, and CORS misconfiguration detection.",
+        "desc": "...",
         "badge": "MEDIUM",
         "color": "#ff8800",
-        "page": "🛡️_CSRF_Scanner"
+        "page": "4_CSRF_Scanner"
     },
     {
         "icon": "🔍",
         "title": "Advanced Scanner",
-        "desc": "Security headers audit, sensitive file exposure, open redirect testing, and port scanning.",
+        "desc": "...",
         "badge": "ADVANCED",
         "color": "#aa44ff",
-        "page": "🔍_Advanced_Scanner"
+        "page": "5_Advanced_Scanner"
     },
     {
         "icon": "👥",
         "title": "About Cyber Wings",
-        "desc": "Meet the team behind this project — our mission, roles, and location in Vadodara, Gujarat.",
+        "desc": "...",
         "badge": "TEAM",
         "color": "#00ff88",
-        "page": "👥_About_Us"
+        "page": "6_About_Us"
     },
 ]
 
+# rows = [modules[:3], modules[3:]]
+# for row in rows:
+#     cols = st.columns(3)
+#     for col, mod in zip(cols, row):
+#         with col:
+#             st.markdown(f"""
+#             <div style="background:linear-gradient(135deg,#070e1d,#0c1829);
+#                         border:1px solid {mod['color']}33;
+#                         border-top: 2px solid {mod['color']};
+#                         border-radius:12px; padding:22px 18px;
+#                         box-shadow:0 4px 20px {mod['color']}15;
+#                         height:100%; transition:all 0.3s ease;">
+#                 <div style="font-size:2rem; margin-bottom:8px;">{mod['icon']}</div>
+#                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+#                     <span style="font-family:'Rajdhani',sans-serif; font-size:1.05rem;
+#                                  font-weight:700; color:#ddeeff;">{mod['title']}</span>
+#                     <span style="background:{mod['color']}18; color:{mod['color']};
+#                                  border:1px solid {mod['color']}55; padding:2px 8px;
+#                                  border-radius:10px; font-size:0.65rem;
+#                                  font-family:'Share Tech Mono',monospace;">{mod['badge']}</span>
+#                 </div>
+#                 <div style="font-family:'Rajdhani',sans-serif; color:#5588aa;
+#                             font-size:0.95rem; line-height:1.55;">
+#                     {mod['desc']}
+#                 </div>
+#                 <div style="margin-top:14px; font-family:'Share Tech Mono',monospace;
+#                             color:{mod['color']}; font-size:0.75rem; opacity:0.7;">
+#                     → Use sidebar to navigate
+#                 </div>
+#             </div>
+#             """, unsafe_allow_html=True)
+#     st.markdown("<br>", unsafe_allow_html=True)
 rows = [modules[:3], modules[3:]]
+
 for row in rows:
     cols = st.columns(3)
+
     for col, mod in zip(cols, row):
         with col:
-            st.markdown(f"""
-            <div style="background:linear-gradient(135deg,#070e1d,#0c1829);
-                        border:1px solid {mod['color']}33;
-                        border-top: 2px solid {mod['color']};
-                        border-radius:12px; padding:22px 18px;
-                        box-shadow:0 4px 20px {mod['color']}15;
-                        height:100%; transition:all 0.3s ease;">
-                <div style="font-size:2rem; margin-bottom:8px;">{mod['icon']}</div>
-                <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                    <span style="font-family:'Rajdhani',sans-serif; font-size:1.05rem;
-                                 font-weight:700; color:#ddeeff;">{mod['title']}</span>
-                    <span style="background:{mod['color']}18; color:{mod['color']};
-                                 border:1px solid {mod['color']}55; padding:2px 8px;
-                                 border-radius:10px; font-size:0.65rem;
-                                 font-family:'Share Tech Mono',monospace;">{mod['badge']}</span>
-                </div>
-                <div style="font-family:'Rajdhani',sans-serif; color:#5588aa;
-                            font-size:0.95rem; line-height:1.55;">
-                    {mod['desc']}
-                </div>
-                <div style="margin-top:14px; font-family:'Share Tech Mono',monospace;
-                            color:{mod['color']}; font-size:0.75rem; opacity:0.7;">
-                    → Use sidebar to navigate
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-    st.markdown("<br>", unsafe_allow_html=True)
+            container = st.container()
 
+            with container:
+                st.markdown(f"""
+                <div style="background:linear-gradient(135deg,#070e1d,#0c1829);
+                            border:1px solid {mod['color']}33;
+                            border-top: 2px solid {mod['color']};
+                            border-radius:12px; padding:22px 18px;
+                            box-shadow:0 4px 20px {mod['color']}15;
+                            height:100%; cursor:pointer;">
+                    <div style="font-size:2rem; margin-bottom:8px;">{mod['icon']}</div>
+
+                    <div style="font-weight:700; color:#ddeeff; margin-bottom:6px;">
+                        {mod['title']}
+                    </div>
+
+                    <div style="color:#5588aa; font-size:0.9rem;">
+                        {mod['desc']}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+                # 🔥 invisible clickable layer
+                if st.button("", key=mod["title"]):
+                    st.switch_page(f"pages/{mod['page']}.py")
 # ─── DISCLAIMER ──────────────────────────────────────────────────────────────
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown('<hr style="border-color:#0d2a4a;">', unsafe_allow_html=True)
