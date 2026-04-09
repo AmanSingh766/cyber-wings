@@ -1,6 +1,10 @@
 import streamlit as st
 import sys, os
-sys.path.insert(0, os.path.dirname(__file__))
+import os
+os.environ["STREAMLIT_BROWSER_GATHER_USAGE_STATS"] = "false"
+# sys.path.insert(0, os.path.dirname(__file__))
+
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 from utils.styles import get_cyber_theme, cyber_card, sidebar_logo
 
